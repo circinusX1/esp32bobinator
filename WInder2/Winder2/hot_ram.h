@@ -1,0 +1,23 @@
+#ifndef HOT_RAM_C_H
+#define HOT_RAM_C_H
+
+//////////////////////////////////////////////////////////////////////////////////////////
+#define  OKAY_MAX_LOOPS     16
+//////////////////////////////////////////////////////////////////////////////////////////
+struct ram_str_t{
+    bool        loopfail:1;
+    bool        ntpfail:1;
+    bool        sensfail:1;
+    bool        graphfail:1;
+    bool        timer:1;
+    size_t      loops;
+    size_t      seconds;
+    uint8_t     sig;
+};
+
+//////////////////////////////////////////////////////////////////////////////////////////
+extern ram_str_t    Ramm;
+bool hot_restore();
+void hot_store(bool force=false);
+
+#endif // HOT_RAM_C_H
