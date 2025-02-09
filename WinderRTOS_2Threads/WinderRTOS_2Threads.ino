@@ -36,7 +36,7 @@ Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_MOSI, TFT_SCLK, TFT_RS
 AsyncWebServer server(80);
 
 const char* ssid = "marius1";
-const char* password = "zoomahia1";
+const char* password = "**********";
 const char* PARAM_MESSAGE = "message";
 static volatile float Goffset = 0;
 static volatile float CoilCurpos;
